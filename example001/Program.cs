@@ -6,30 +6,35 @@
 // 918 -> 1
 
 
-
-Console.WriteLine("Введите трехзначное число: ");
 try
 {
-    int i = Convert.ToInt32(Console.ReadLine());
-    char[] arr = i.ToString().ToCharArray();                // переводит число в массив
-    int size = arr.Length;
-    if (size == 3)
+    Console.WriteLine("Введите трехзначное число: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    int sum = 0;
+    if (num > 99 && num < 1000)
     {
-        Console.WriteLine(arr[1]);
+        sum = num % 100;
+
+        sum = sum / 10;
+        Console.WriteLine(sum);
+    }
+
+    else if (num < -99 && num > -1000)
+    {
+        num = -num;
+
+        sum = num % 100;
+
+        sum = num % 100;
+
+        sum = sum / 10;
+        Console.WriteLine(sum);
     }
     else
-    {
-        Console.WriteLine("Введите число от 100 до 999 ");
-    }
-}
+        Console.WriteLine("Введите число от 100 до 999");
 
+}
 catch
 {
-    Console.WriteLine("Введите число цифрами");
+    Console.WriteLine("Введите число цифрами от 100 до 999");
 }
-
-
-
-  
-
-
